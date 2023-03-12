@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Image Panels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul>
+        <li class="card-item">
+            <img src="./img/img1.jpg" alt="">
+            <span>
+                <i class="far fa-eye"></i>
+            </span>
+        </li>
+        <li class="card-item">
+            <img src="./img/img2.jpg" alt="">
+            <span>
+                <i class="far fa-eye"></i>
+            </span>
+        </li>
+        <li class="card-item">
+            <img src="./img/img3.jpg" alt="">
+            <span>
+                <i class="far fa-eye"></i>
+            </span>
+        </li>
+    </ul>
+
+    <script>
+        // const panels = document.querySelectorAll('.card-item');
+
+        // for (var i = 0; i < panels.length; i++) {
+        //     panels[i].addEventListener("click", function() {
+        //         for (var j = 0; j < panels.length; j++) {
+        //         panels[j].classList.remove("open");
+        //         }
+        //         this.classList.add("open");
+        //     });
+        // }
+
+        // Get the element you want to add/remove the class to
+        const element = document.querySelectorAll('.card-item span');
+        
+        // Loop through all of the elements and add event listeners to them
+        element.forEach(function(element) {
+            // Add an event listener for when the element is hovered over
+            element.addEventListener('mouseover', function() {
+            // Add the class name to the element
+            element.parentElement.classList.add('open');
+            });
+
+            // Add an event listener for when the pointer is removed from the element
+            element.addEventListener('mouseout', function() {
+            // Remove the class name from the element
+            element.parentElement.classList.remove('open');
+            });
+        });   
+    </script>
+</body>
+</html>
