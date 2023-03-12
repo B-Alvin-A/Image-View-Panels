@@ -31,31 +31,19 @@
     </ul>
 
     <script>
-        // const panels = document.querySelectorAll('.card-item');
-
-        // for (var i = 0; i < panels.length; i++) {
-        //     panels[i].addEventListener("click", function() {
-        //         for (var j = 0; j < panels.length; j++) {
-        //         panels[j].classList.remove("open");
-        //         }
-        //         this.classList.add("open");
-        //     });
-        // }
-
-        // Get the element you want to add/remove the class to
         const element = document.querySelectorAll('.card-item span');
         
         // Loop through all of the elements and add event listeners to them
         element.forEach(function(element) {
             // Add an event listener for when the element is hovered over
             element.addEventListener('mouseover', function() {
-            // Add the class name to the element
+            // Add the class name to the parent element
             element.parentElement.classList.add('open');
             });
 
             // Add an event listener for when the pointer is removed from the element
             element.addEventListener('mouseout', function() {
-            // Remove the class name from the element
+            // Remove the class name from the parent element
             element.parentElement.classList.remove('open');
             });
         });   
